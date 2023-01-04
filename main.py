@@ -1,0 +1,10 @@
+from tkinter import *
+window=Tk()
+window.geometry("400x400")
+window.title("HCL employee system")
+menubar=Menu(window)
+menubar.add_cascade(label='login')
+menubar.add_cascade(label='newuser')
+menubar.add_cascade(label='search')
+window.config(menu=menubar)
+window.mainloop()

@@ -14,17 +14,17 @@ class log:
 menubar.add_command(label="Login",command=self.main1)
 menubar.add_command(label="Newuser",command=self.main2)
 menubar.add_command(label="Search",command=self.main3)
-    window.config(menu=menubar)
-    window.mainloop()
-    def connection(self,user,passw):
-        conn=mysql.connector.connect(host='localhost',user='root',password='password',port=3306,db='hcl')
-        query="select id from login where username=%s and password=%s"
-        vals=(user,passw)
-        cur=conn.cursor(prepared,vals)
-        result=cur.fetchone()
-        cur.close()
-        conn.close()
-        return result
+window.config(menu=menubar)
+window.mainloop()
+def connection(self,user,passw):
+    conn=mysql.connector.connect(host='localhost',user='root',password='password',port=3306,db='hcl')
+    query="select id from login where username=%s and password=%s"
+    vals=(user,passw)
+    cur=conn.cursor(prepared,vals)
+    result=cur.fetchone()
+    cur.close()
+    conn.close()
+    return result
     def check(self):
         self.u_name=un.get()
         self.pass_word=pw.get()
